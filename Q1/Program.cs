@@ -11,25 +11,31 @@ namespace Q1
 		static void Main(string[] args)
 		{
 			int number = 5;
-			bool result = IsOdd(number);
+			bool result =number.IsOdd();
 			Console.WriteLine(result);
 
 			number = 6;
-			result = IsEven(number);
+			result = number.IsEven();
 			Console.WriteLine(result);
 		}
-		static bool IsOdd(int source)
+		
+	}
+
+	public static class IntExtensions
+	{
+		public static bool IsOdd(this int source)
 		{
 			if (source % 2 != 0)
 				return true;
 			else return false;
 		}
 
-		static bool IsEven(int source)
+		public static bool IsEven(this int source)
 		{
 			if (source % 2 == 0)
 				return true;
 			else return false;
 		}
+
 	}
 }

@@ -23,8 +23,8 @@ namespace Q3
 	{
 		public static int ToInt(this string value,int defaultValue)
 		{
-			int result = 0;
-			bool canConvert2Int = int.TryParse(value,out defaultValue);
+			
+			bool canConvert2Int = int.TryParse(value,out int result);
 			if (canConvert2Int==true) return result;
 			else return defaultValue;
 		}
